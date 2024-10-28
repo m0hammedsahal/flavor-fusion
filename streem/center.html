@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Alignment with Tailwind CSS</title>
+  <!-- Include the Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="flex justify-center items-center h-screen">   
+  <!-- Outer Image -->   
+  <img src="./images/Sub Container (5).png" alt="Outer Image" class="imgb">   
+  <!-- Inner Image -->   
+  <img src="./images/Button (2).png" alt="Inner Image" class="Inner absolute m-auto"> 
+</div>
+<img src="./images/Image (2).png" alt="" class="Inner lg:w-[11%] lg:h-[70px] sm:w-[20%] sm:h-[120px] w-[65px] h-[70px]">
+<div class="title border-dotted border-blue-900 w-[50%] h-[3px] "></div>
+
+
+<style>
+  .title{
+    border: dotted blue;
+    width: 50%;
+    height: 3%;
+
+  }
+  .Inner{
+    filter:drop-shadow(10px 7px 20px orange);
+  }
+  .imgb{
+    border-radius: 20px;
+    border: 3px dotted red
+  }
+</style>
+</body>
+</html>

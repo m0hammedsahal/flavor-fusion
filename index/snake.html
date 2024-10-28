@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Snake and Ladder Game</title>
+    <style>
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 2px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .cell {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            background-color: #e5e5e5;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+        .cell:nth-child(odd) {
+            background-color: #cbd5e0; /* Light gray-blue for alternating pattern */
+        }
+        .cell:nth-child(even) {
+            background-color: #edf2f7; /* Lighter gray-blue for alternating pattern */
+        }
+        .snake, .ladder {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <section class="w-11/12 md:w-3/4 lg:w-2/3">
+        <div class="game-board">
+            <!-- Cells with numbers, snakes, and ladders -->
+            <!-- Assuming only 40 cells for brevity, replicate as needed -->
+            <div class="cell">1</div>
+            <div class="cell">2</div>
+            <div class="cell">3</div>
+            <div class="cell">4</div>
+            <div class="cell">5</div>
+            <div class="cell">6</div>
+            <div class="cell">7</div>
+            <div class="cell">8</div>
+            <div class="cell">9</div>
+            <div class="cell">10</div>
+
+            <div class="cell">11</div>
+            <div class="cell">12</div>
+            <div class="cell">13</div>
+            <div class="cell">14</div>
+            <div class="cell">15</div>
+            <div class="cell">16</div>
+            <div class="cell">17</div>
+            <div class="cell">18</div>
+            <div class="cell">19</div>
+            <div class="cell">20</div>
+
+            <div class="cell">21</div>
+            <div class="cell">22</div>
+            <div class="cell">23</div>
+            <div class="cell">24</div>
+            <div class="cell">25</div>
+            <div class="cell">26</div>
+            <div class="cell">27</div>
+            <div class="cell">28</div>
+            <div class="cell">29</div>
+            <div class="cell">30</div>
+
+            <div class="cell">31</div>
+            <div class="cell">32</div>
+            <div class="cell">33</div>
+            <div class="cell">34</div>
+            <div class="cell">35</div>
+            <div class="cell">36</div>
+            <div class="cell">37</div>
+            <div class="cell">38</div>
+            <div class="cell">39</div>
+            <div class="cell">40</div>
+
+            <div class="cell">41</div>
+            <div class="cell">42</div>
+            <div class="cell">43</div>
+            <div class="cell">44</div>
+            <div class="cell">45</div>
+            <div class="cell">46</div>
+            <div class="cell">47</div>
+            <div class="cell">48</div>
+            <div class="cell">49</div>
+            <div class="cell">50</div>
+
+            <div class="cell">51</div>
+            <div class="cell">52</div>
+            <div class="cell">53</div>
+            <div class="cell">54</div>
+            <div class="cell">55</div>
+            <div class="cell">56</div>
+            <div class="cell">57</div>
+            <div class="cell">58</div>
+            <div class="cell">59</div>
+            <div class="cell">60</div>
+
+            <div class="cell">61</div>
+            <div class="cell">62</div>
+            <div class="cell">63</div>
+            <div class="cell">64</div>
+            <div class="cell">65</div>
+            <div class="cell">66</div>
+            <div class="cell">67</div>
+            <div class="cell">68</div>
+            <div class="cell">69</div>
+            <div class="cell">70</div>
+
+            <div class="cell">71</div>
+            <div class="cell">72</div>
+            <div class="cell">73</div>
+            <div class="cell">74</div>
+            <div class="cell">75</div>
+            <div class="cell">76</div>
+            <div class="cell">77</div>
+            <div class="cell">78</div>
+            <div class="cell">79</div>
+            <div class="cell">80</div>
+
+            <div class="cell">81</div>
+            <div class="cell">82</div>
+            <div class="cell">83</div>
+            <div class="cell">84</div>
+            <div class="cell">85</div>
+            <div class="cell">86</div>
+            <div class="cell">87</div>
+            <div class="cell">88</div>
+            <div class="cell">89</div>
+            <div class="cell">90</div>
+
+            <div class="cell">91</div>
+            <div class="cell">92</div>
+            <div class="cell">93</div>
+            <div class="cell">94</div>
+            <div class="cell">95</div>
+            <div class="cell">96</div>
+            <div class="cell">97</div>
+            <div class="cell">98</div>
+            <div class="cell">99</div>
+            <div class="cell">100</div>
+        </div>
+    </section>
+
+    <script>
+        // Function to toggle the background color of a cell
+        function toggleCellColor(event) {
+            const cell = event.currentTarget;
+            const originalColor = cell.dataset.originalColor;
+            const newColor = 'yellow';
+
+            if (cell.style.backgroundColor === newColor) {
+                cell.style.backgroundColor = originalColor;
+            } else {
+                cell.style.backgroundColor = newColor;
+            }
+        }
+
+        // Add event listeners to all cells and store their original background color
+        document.querySelectorAll('.cell').forEach(cell => {
+            cell.dataset.originalColor = getComputedStyle(cell).backgroundColor;
+            cell.addEventListener('click', toggleCellColor);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="home">
+        <header class="min-h-[88px] bg-[#0076B0] flex justify-between items-center px-[30px]">
+            <h1 class="h-full">
+                <a href="#" class="h-full">
+                    <img src="/images3/home/Untitled design (43) copy 1.png" alt="logo" class="h-full">
+                </a>
+            </h1>
+            <ul class="md:flex items-center hidden">
+                <li class="items-center h-[22px] pr-[10px] border-r-[1px] border-[#FFFFFF33]">
+                    <a href="#" class="text-[16px] font-[600] leading-[21.6px] text-white">Home</a>
+                </li>
+                <li class="items-center h-[22px] pr-[10px] border-r-[1px] border-[#FFFFFF33] ml-[15px]">
+                    <a href="#" class="text-[16px] font-[600] leading-[21.6px] text-white">About</a>
+                </li>
+                <li class="items-center h-[22px] pr-[10px] border-r-[1px] border-[#FFFFFF33] ml-[15px]">
+                    <a href="#" class="text-[16px] font-[600] leading-[21.6px] text-white">Project</a>
+                </li>
+                <li class="h-[22px] ml-[10px] flex items-center pr-[10px] border-r-[1px] border-[#FFFFFF33]">
+                    <a href="#" class="text-[16px] font-[600] leading-[21.6px] text-white mr-[10px]">Services</a>
+                    <i class='bx bx-chevron-right h-[12px] w-[6px] text-[25px] mr-[10px] text-[#fff] mb-[5px] pr-[10px]'></i>
+                </li>
+                <li class="h-[22px] ml-[10px] flex items-center">
+                    <a href="#" class="text-[16px] font-[600] leading-[21.6px] text-white mr-[10px]">Roofs</a>
+                    <i class='bx bx-chevron-right h-[12px] w-[6px] text-[25px] mr-[10px] text-[#fff] mb-[5px]'></i>
+                </li>
+                <li class="items-center ml-[20px] py-[15px] px-[56px] bg-[#fff] rounded-[8px]">
+                    <a href="#" class="text-[16px] leading-[18.75px] font-[700] m-auto">Contact</a>
+                </li>
+            </ul>
+            <i class='bx bx-menu md:hidden text-[30px] text-white' id="mobile-menu"></i>
+            
+        </header>
+        <div class="bg-[#0076B0] hidden" id="mobile-drop">
+            <ul class="text-center">
+                <li class="items-center"><a href="#" class="text-[16px] font-[600] leading-[21.6px] text-white  border-b-[1px] border-[#FFFFFF33] mt-[10px]">Home</a></li>
+                <li class="items-center"><a href="#" class="text-[16px] font-[600] leading-[21.6px] text-white  border-b-[1px] border-[#FFFFFF33] mt-[10px]">About</a></li>
+                <li class="items-center"><a href="#" class="text-[16px] font-[600] leading-[21.6px] text-white  border-b-[1px] border-[#FFFFFF33] mt-[10px]">Project</a></li>
+                <li class="items-center"><a href="#" class="text-[16px] font-[600] leading-[21.6px] text-white  border-b-[1px] border-[#FFFFFF33] mt-[10px]">Services</a></li>
+                <li class="items-center"><a href="#" class="text-[16px] font-[600] leading-[21.6px] text-white  border-b-[1px] border-[#FFFFFF33] mt-[10px]">Roofs</a></li>
+                <li class="items-center"><a href="#" class="text-[16px] leading-[21.6px] font-[600] text-white  border-b-[1px] border-[#FFFFFF33] mt-[10px]">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="px-[10%] pt-[100px] pb-[100px]">
+        <h2 class="text-[56px] font-[400] mb-[100px]">Fast Quote</h2>
+        <h3 class="text-[25px] font-[400] mb-[30px]">Contact details</h3>
+        <div class="w-[100%] flex flex-wrap justify-between">
+            <div class="md:w-[45%] w-[100%]">
+                <input type="text" placeholder="First Name" class="mr-[22px] mb-[40px] w-[90%] h-[53px] border-[1px] border-[#014751] rounded-[5px] p-[20px]">
+                <input type="text" placeholder="Email" class="mr-[22px] mb-[40px] w-[90%] h-[53px] border-[1px] border-[#014751] rounded-[5px] p-[20px]">
+                <input type="text" placeholder="Address" textar class="mb-[40px] md:mb-0 mr-[22px] w-[90%] h-[156px] border-[1px] border-[#014751] rounded-[5px] p-[20px]">
+            </div>
+            <div class="md:w-[45%] w-[100%]">
+                <input type="text" placeholder="Last Name" class="mb-[40px] w-[90%] h-[53px] border-[1px] border-[#014751] rounded-[5px] p-[20px]">
+                <input type="text" placeholder="Phone" class="mb-[40px] w-[90%] h-[53px] border-[1px] border-[#014751] rounded-[5px] p-[20px]">
+                <input type="text" placeholder="City" class="mb-[40px] w-[90%] h-[53px] border-[1px] border-[#014751] rounded-[5px] p-[20px]">
+                <input type="text" placeholder="Street" class="w-[90%] h-[53px] border-[1px] border-[#014751] rounded-[5px] p-[20px]">
+            </div>
+        </div>
+        <h3 class="text-[28px] font-[400] mb-[30px] mt-[50px]">Services required</h3>
+        <div class="w-[100%] flex flex-wrap justify-between">
+            <div class="w-[90%] lg:w-[60%]">
+                <div class="w-[90%] mb-[30px] items-center flex">
+                    <input type="checkbox" class="sm:w-[28px] w-[20px] h-[28px] mr-[20px]" placeholder="">
+                    <label class="sm:text-[26px] font-[400] sm:mb-0 mb-[]" for=""> Roof Replacement</label>
+                </div>
+                <div class="w-[90%] mb-[30px] items-center flex">
+                    <input type="checkbox" class="sm:w-[28px] w-[20px] h-[28px] mr-[20px]" placeholder="">
+                    <label class="sm:text-[26px] font-[400] sm:mb-0 mb-[]" for=""> Roof Maintenance</label>
+                </div>
+                <div class="w-[90%] mb-[30px] items-center flex">
+                    <input type="checkbox" class="sm:w-[28px] w-[20px] h-[28px] mr-[20px]" placeholder="">
+                    <label class="sm:text-[26px] font-[400] sm:mb-0 mb-[]" for="">Guttering Repairs or Replacement</label>
+                </div>
+                <div class="w-[90%] mb-[30px] items-center flex">
+                    <input type="checkbox" class="sm:w-[28px] w-[20px] h-[28px] mr-[20px]" placeholder="">
+                    <label class="sm:text-[26px] font-[400] sm:mb-0 mb-[]" for="">Spouting Repairs or Replacement</label>
+                </div>
+                <div class="w-[90%] mb-[30px] items-center flex">
+                    <input type="checkbox" class="sm:w-[28px] w-[20px] h-[28px] mr-[20px]" placeholder="">
+                    <label class="sm:text-[26px] font-[400] sm:mb-0 mb-[]" for="">Fascias Repairs or Replacement</label>
+                </div>
+            </div>
+            <div class="w-[90%] lg:w-[40%]">
+                <div class="w-[90%] mb-[30px] items-center flex">
+                    <input type="checkbox" class="sm:w-[28px] w-[20px] h-[28px] mr-[20px]" placeholder="">
+                    <label class="sm:text-[26px] font-[400] sm:mb-0 mb-[]" for="">Membrane Repairs</label>
+                </div>
+                <div class="w-[90%] mb-[30px] items-center flex">
+                    <input type="checkbox" class="sm:w-[28px] w-[20px] h-[28px] mr-[20px]" placeholder="">
+                    <label class="sm:text-[26px] font-[400] sm:mb-0 mb-[]" for="">Butynol Repairs</label>
+                </div>
+                <div class="w-[90%] mb-[30px] items-center flex">
+                    <input type="checkbox" class="sm:w-[28px] w-[20px] h-[28px] mr-[20px]" placeholder="">
+                    <label class="sm:text-[26px] font-[400] sm:mb-0 mb-[]" for="">Roof Painting (Iron)</label>
+                </div>
+                <div class="w-[90%] mb-[30px] items-center flex">
+                    <input type="checkbox" class="sm:w-[28px] w-[20px] h-[28px] mr-[20px]" placeholder="">
+                    <label class="sm:text-[26px] font-[400] sm:mb-0 mb-[]" for="">Roof Painting (Tiles)</label>
+                </div>
+            </div>
+            
+
+            
+        </div>
+        <h3 class="text-[28px] font-[400] mb-[30px] mt-[50px]">Additional Requirement</h3>
+        <input type="text" placeholder="Address" textar class="mr-[22px] w-[57%] h-[156px] border-[1px] border-[#014751] rounded-[5px] p-[20px]"><br>
+        <button class="text-white mt-[27px] text-[18px] font-[700] bg-[#0076B0] rounded-md px-6 py-4 w-[181px] h-[60px]">Submit</button>
+    </section>
+    
+    <section class="w-[100%] mb-[50px] md:mb-[200px] mt-[100px] md:mt-[200px] items-center lg:text-left text-center flex flex-wrap justify-between px-[10%]">
+        <div class="lg:mr-[50px] mr-0 lg:w-[35%] w-[100%] lg:mb-0 mb-[20px] sm:mb-[50px]">
+            <div class="flex lg:ml-0 md:ml-[28%] ml-[43%]">
+                <p class="w-[4px] h-[23px] bg-[#FFB629]"></p>
+                <button class="text-white bg-black w-[71px] h-[23px]">Contact</button>
+            </div>
+            <h3 class="sm:mt-[30px] mt-[10px] sm:text-[35px] text-[25px] font-[600]">Get in touch with us</h3>
+        </div>
+        <div class="lg:w-[55%] w-[100%] h-[100%]">
+            <form action="" class="f">
+                <input type="text" placeholder="Name" class="mr-[22px] w-[43.5%] sm:h-[61px] h-[31px] border-[1px] border-[#014751] rounded-[5px] p-[20px]">
+                <input type="text" placeholder="Email" class="w-[43.5%] sm:h-[61px] h-[31px] border-[1px] border-[#014751] rounded-[5px] p-[20px]">
+                <input type="text" placeholder="Message" class="mt-[27px] w-[92%] h-[130px] sm:h-[204px] border-[1px] border-[#014751] rounded-[5px] pt-[20px] pl-[20px] pb-[140px]">
+            </form>
+            <button class="text-white mt-[27px] text-[18px] font-[700] bg-[#0076B0] rounded-md px-6 py-4 w-[181px] h-[60px]">Submit</button>
+        </div>
+    </section>
+    <footer class="d">
+        <section class="bg-[#0076B0] text-white ">
+            <div class="flex justify-between w-[100%] h-[] p-[5%]">
+                <div class="lg:w-[20%] sm:w-[35%]">
+                    <img src="/images3/service/logo.png" class="w-[159px] mb-[20px]" alt="">
+                    <p class="text-[18px] font-[400]">Working Hours:</p>
+                    <p class="text-[18px] font-[400]">Monday - Friday</p>
+                    <p class="text-[18px] font-[400] mb-[20px]">7am - 5pm</p>
+                    <div class="container">
+                        <i class='iconf bx bxl-facebook-circle text-[#35B5E4] w-[36px] h-[36px] bg-white rounded-[50%] p-[8px] mr-[10px] text-[20px]'></i>
+                        <i class='icony bx bxl-youtube text-[#35B5E4] w-[36px] h-[36px] bg-white rounded-[50%] p-[8px] mr-[10px] text-[20px]' ></i>
+                        <i class='icont bx bxl-twitter text-[#35B5E4] w-[36px] h-[36px] bg-white rounded-[50%] p-[8px] mr-[10px] text-[20px]' ></i>
+                        <i class='bx bxl-linkedin-square text-[#35B5E4] w-[36px] h-[36px] bg-white rounded-[50%] p-[8px] text-[20px]'></i>
+                    </div>
+                </div>
+                <div class="lg:w-[15%] hidden lg:block">
+                    <h3 class="text-[18px] font-[600] mb-[20px]">Quick Links</h3>
+                    <p class="text-[17px] font-[400] mb-[10px]">About</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">How We Work</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">FAQs</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Conatct Us</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Blogs & News</p>
+                </div>
+                <div class="lg:w-[15%] hidden w-[50%] lg:block">
+                    <h3 class="text-[18px] font-[600] mb-[20px]">Services</h3>
+                    <p class="text-[17px] font-[400] mb-[10px]">Roof Replacement</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Roof Maintenance</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Guttering Repairs</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Guttering Replacement</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Spouting Repairs</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Spouting Replacement</p>
+                </div>
+                <div class="lg:w-[15%] hidden lg:block">
+                    <h3 class="text-[18px] font-[600] mb-[45px]"></h3>
+                    <p class="text-[17px] font-[400] mb-[10px]">Fascias Repairs</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Fascias Replacement</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Membrane Repairs</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Butynol Repairs</p>
+                    <p class="text-[17px] font-[400] mb-[10px]">Roof Painting Iron/Tiles</p>
+                </div>
+                <div class="lg:w-[20%] w-[35%] hidden sm:block">
+                    <h3 class="text-[18px] font-[600] mb-[20px]">Quick Links</h3>
+                    <div class="flex mb-[10px]">
+                        <img src="/images3/about/Group 14.png" alt="" class="mr-[10px] mt-[5px] w-[18px] h-[18px]">
+                        <p class="text-[16px] font-[400] mb-[10px]"> lhroofinglimited@gmail.com</p>
+                    </div>
+                    <div class="flex mb-[10px]">
+                        <img src="/images3/about/Group 1574.png" alt="" class="mr-[10px] mt-[5px] w-[18px] h-[18px]">
+                        <p class="text-[16px] font-[400] mb-[10px]"> 0211339555</p>
+                    </div>
+                    <div class="flex mb-[10px]">
+                        <img src="/images3/about/Group 1697.png" alt="" class="mr-[10px] mt-[5px] w-[18px] h-[18px]">
+                        <p class="text-[16px] font-[400] mb-[10px]">Queen Street, Auckland
+                            Servicing Auckland, Whangarei, and Hamilton</p>
+                    </div>
+                </div>
+                <i class='bx bx-menu sm:hidden block text-[30px] text-white' id="mobile-menu"></i>
+
+            </div>
+            <ul class="sm:flex flex-wrap justify-between text-white items-center mb-[50px] pt-[30px] h-[26px] sm:w-[90%] md:w-[80%] lg:w-[55%] hidden m-auto">
+                <li class="text-[16px] font-[400] pr-[4%] sm-mt-0 m-auto border-r-[1px]"><a href="">Home</a></li>
+                <li class="text-[16px] font-[400] px-[4%] sm-mt-0 m-auto border-r-[1px] "><a href="">Services</a></li>
+                <li class="text-[16px] font-[400] px-[4%] sm-mt-0 m-auto border-r-[1px] "><a href="">About Us</a></li>
+                <li class="text-[16px] font-[400] px-[4%] sm-mt-0 m-auto border-r-[1px] "><a href="">Terms & Conditions</a></li>
+                <li class="text-[16px] font-[400] pl-[4%] sm-mt-0 m-auto "><a href="">Contact Us</a></li>
+            </ul>
+            <div class="bg-[#35B5E4] h-[60px] items-center pt-[16px] text-center">
+                <h4 class="text-[16px] font-[400]">  Copyright @LH Roofing Limited 2024| All Rights Resaved.  </h4>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

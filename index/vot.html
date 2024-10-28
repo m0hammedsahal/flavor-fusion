@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        i{
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vote for Your Favorite Option</h1>
+        <button onclick="submitVote('Car')"><i class='bx bx-car'></i><p>Car</p></button>
+        <button onclick="submitVote('Bike')"><i class='bx bx-car'></i><p>Bike</p></button>
+        <button onclick="submitVote('Cycle')"><i class='bx bx-car'></i><p>Cycle</p></button>
+        <button onclick="submitVote('Watch')"><i class='bx bx-car'></i><p>Watch</p></button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        function submitVote(option) {
+            fetch('/vote', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ option: option })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('message').innerText = data.message;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('message').innerText = 'An error occurred. Please try again.';
+            });
+        }
+
+
+
+        const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const port = 3000;
+
+// Middleware
+app.use(bodyParser.json());
+app.use(express.static('public'));
+
+// In-memory vote storage
+let votes = { 'Car': 0, 'Bike': 0, 'Cycle': 0, 'Watch': 0 };
+
+app.post('/vote', (req, res) => {
+    const { option } = req.body;
+    if (votes.hasOwnProperty(option)) {
+        votes[option]++;
+        res.json({ message: `Thank you for voting for ${option}!` });
+    } else {
+        res.status(400).json({ message: 'Invalid option' });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Voting app listening at http://localhost:${port}`);
+});
+
+    </script>
+</body>
+</html>

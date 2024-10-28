@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+<style>
+    ul{
+        list-style: none;
+    }
+</style>
+
+    <section>
+        <h1 class="">JavaScript</h1>
+        <h2></h2>
+        <ul id="itemssection">
+            <!-- <li>fan</li>
+            <li>light</li>
+            <li>sofa</li>
+            <li>tile</li>
+            <li>board</li>
+            <li>paper</li> -->
+        </ul>
+        <ol id="">
+            <li>fan</li>
+            <li>light</li>
+            <li>sofa</li>
+            <li>tile</li>
+            <li>board</li>
+            <li>paper</li>
+        </ol>
+    </section>
+
+
+    <script>
+
+
+        let itemssection = document.getElementById("itemssection");
+        let shaktha = ["fan", "light", "sofa", "tile", "board", "paper", ]
+        
+        // method-1
+        // for (let inter of shaktha) {
+        //     let li = document.createElement("li");
+        //     li.innerText = inter;
+        //     itemssection.appendChild(li);
+        // } 
+
+        // method-2  forEach()
+        shaktha.forEach(function (inter, index){
+            let li = document.createElement("li");
+            li.innerText = `${index + 1} ${inter}`;
+            itemssection.appendChild(li);
+        })
+
+
+        // 1:push 
+        // 2:pop 
+        // 3:shift 
+        // 4:unshift
+
+        // find all list items
+        // let listitems = document.querySelectorAll("li")
+        // let itemArray = [];
+        
+        // // itrate all list items
+        // listitems.forEach(function (item) {
+        //     let listitems = item.innerText;
+        //     // push all list item content to a new array
+        //     itemArray.push(listitems);
+        // })
+        // console.log(itemArray)
+
+        // syntax
+        function functionName() {steps}
+        functionName();
+    </script>
+</body>
+</html>

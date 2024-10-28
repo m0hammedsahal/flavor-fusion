@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Scrollbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div class="text w-[50%] h-[200px] overflow-x-scroll custom-scrollbar">
+        <h1>Featured Job</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit hic vero voluptas, molestias quisquam natus officiis maiores corporis tempore veniam et tempora quod? Magni temporibus odit iste ducimus fugit?</p>
+        <h1>Featured Job</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit hic vero voluptas, molestias quisquam natus officiis maiores corporis tempore veniam et tempora quod? Magni temporibus odit iste ducimus fugit?</p>
+        <h1>Featured Job</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit hic vero voluptas, molestias quisquam natus officiis maiores corporis tempore veniam et tempora quod? Magni temporibus odit iste ducimus fugit?</p>
+        <h1>Featured Job</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit hic vero voluptas, molestias quisquam natus officiis maiores corporis tempore veniam et tempora quod? Magni temporibus odit iste ducimus fugit?</p>
+        <h1>Featured Job</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit hic vero voluptas, molestias quisquam natus officiis maiores corporis tempore veniam et tempora quod? Magni temporibus odit iste ducimus fugit?</p>
+        <h1>Featured Job</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit hic vero voluptas, molestias quisquam natus officiis maiores corporis tempore veniam et tempora quod? Magni temporibus odit iste ducimus fugit?</p>
+        <h1>Featured Job</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit hic vero voluptas, molestias quisquam natus officiis maiores corporis tempore veniam et tempora quod? Magni temporibus odit iste ducimus fugit?</p>
+        <h1>Featured Job</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit hic vero voluptas, molestias quisquam natus officiis maiores corporis tempore veniam et tempora quod? Magni temporibus odit iste ducimus fugit?</p>
+        <!-- Repeat the content as needed -->
+    </div>
+</body>
+<style>
+    /* styles.css */
+
+/* Custom styling for scrollbar */
+.custom-scrollbar {
+    scrollbar-width: thin; /* "auto" may not work on all browsers, "thin" forces scrollbar */
+    scrollbar-color: blue transparent; /* blue thumb with transparent track */
+    /* Flexbox properties to reverse the content direction */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Set overflow-x to hidden to hide the default scrollbar */
+    overflow-x: hidden;
+    /* Set padding-right to accommodate the width of the scrollbar */
+    padding-right: 10px; /* Adjust according to the width of the scrollbar */
+}
+
+/* Webkit (Chrome, Safari, etc.) scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+    height: 10px; /* Set the height of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: blue; /* Set the color of the thumb */
+    border-radius: 5px; /* Set the border radius of the thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: wheat; /* Set the color of the track */
+}
+
+/* Firefox scrollbar */
+.custom-scrollbar {
+    scrollbar-color: rgb(170, 255, 0) transparent; /* Set the color of the thumb and track */
+}
+
+.custom-scrollbar::-moz-scrollbar-thumb {
+    background-color: blue; /* Set the color of the thumb */
+}
+
+.custom-scrollbar::-moz-scrollbar-track {
+    background-color: transparent; /* Set the color of the track */
+}
+
+</style>
+</html>

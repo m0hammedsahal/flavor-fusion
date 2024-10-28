@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASA MONO</title>
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="images/favicon.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="bg-black">
+        <header class="relative flex justify-between h-[100px] items-center bg-[#F5980C] pr-[5%] pl-[5%]">
+            <div class="left">
+                <h1 class="text-2xl text-yellow-50">Casa Mono</h1>
+            </div>
+            <div class="right">
+                <div class="menu">
+                    <ul class="sm:flex hidden justify-between">
+                        <li class="text-[18px] font-[600] mr-[30px]"><a href="index.html">Home</a></li>
+                        <li class="text-[18px] font-[600] mr-[30px]"><a href="about.html">About</a></li>
+                        <li class="text-[18px] font-[600] mr-[30px]"><a href="contact.html">Contact</a></li>
+                        <li class="px-[13px] py-[4px] bg-yellow-50 rounded-[24px] text-[#F5980C]" style="box-shadow: 20px 20px 20px;"><a class="" href="menu.html">Menu</a></li>
+                    </ul>
+    
+            </div>
+            <div class="sm:hidden">
+                <p id="mobile-menu">Menu</p>
+            </div>
+            <div id="mobile-drop" class="bg-[#F5980C] p-4 absolute top-[100px] w-[80%] hidden">
+                <ul class="">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Menu</li>
+                </ul>
+            </div>
+        </header>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Dropdown functionality (similar to your existing code)
+                // ...
+    
+                // Menu icon functionality
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileDrop = document.getElementById('mobile-drop');
+                let isMenuOpen = false;
+    
+                mobileMenu.addEventListener('click', function () {
+                isMenuOpen = !isMenuOpen;
+    
+                if (isMenuOpen) {
+                    mobileDrop.classList.remove('hidden');
+                } else {
+                    console.log('Closing menu');
+                    mobileDrop.classList.add('hidden');
+                }
+                });
+    
+                
+            });
+        </script>
+    </section>
+</body>
+</html>

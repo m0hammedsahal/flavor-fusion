@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Banner styles */
+        .banner {
+            background-image: url('path/to/banner-image.jpg');
+            background-size: cover;
+            height: 300px;
+            position: relative;
+        }
+        .banner h1 {
+            font-size: 36px;
+            text-align: center;
+            padding-top: 100px;
+        }
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #fff;
+            color: #000;
+        }
+        /* Additional dark mode styles for other elements */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <h1>Stranger Things</h1>
+        </div>
+        <p>When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.</p>
+        <label class="switch">
+            <input type="checkbox" onclick="toggleDarkMode()">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
